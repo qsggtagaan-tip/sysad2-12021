@@ -1,0 +1,12 @@
+---
+- name: Copy File
+  hosts: ubuntu
+  
+  tasks:
+    - name: Include config.yaml variables
+      copy:
+        src: /etc/hosts
+        dest: /etc/hosts
+        owner: root
+        group: root
+        mode: '0644'
